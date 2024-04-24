@@ -44,4 +44,13 @@ int Account::getNbDeposits (void) {
 
 int Account::getNbWithdrawals (void) {
     return _totalNbWithdrawals;
-}   
+}
+
+void Account::displayAccountsInfos(void){
+    cout << "accounts" << _nbAccounts << "total:" << _totalAmount << "deposits:" << _totalNbDeposits << "withdrawls:" << _totalNbWithdrawals << endl;
+}
+
+void Account::makeDeposit(void)
+{
+    cout << "index:" << _accountIndex << 
+}

@@ -1,9 +1,9 @@
 CC = c++
-NAME = Harl
+NAME = harlFilter
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -I./includes
 RM = rm -rf
 
-SRCS = main.cpp Harl.cpp
+SRCS = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 

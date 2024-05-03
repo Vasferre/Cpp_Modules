@@ -8,7 +8,8 @@ using std::cerr;
 using std::cin;
 using std::endl;
 
-int main(int argc, char **argv){
+int main(int argc, char **argv)
+{
     if (argc != 4) {
         cerr << "invalid number of params" << endl;
         return EXIT_FAILURE;
@@ -44,5 +45,5 @@ int main(int argc, char **argv){
     new_file << content;
     file.close();
     new_file.close();
-    return EXIT_SUCESS;
+    return EXIT_SUCCESS;
 }

@@ -1,8 +1,8 @@
 #ifndef HUMANA_H
-#endif HUMANA_H
+#define HUMANA_H
 
 #include <iostream>
-#include "weapon.hpp"
+#include "Weapon.hpp"
 
 std::cout;
 std::endl;

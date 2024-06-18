@@ -1,5 +1,5 @@
 CC = c++
-NAME = BraiiiiiiiinnnzzzZ
+NAME = zombieHorde
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -I./includes
 RM = rm -rf
 

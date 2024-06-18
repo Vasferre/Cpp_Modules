@@ -1,12 +1,12 @@
-#include "harl.hpp"
+#include "Harl.hpp"
 
 int main (int argc, char **argv)
 {
-    harl harl;
+    Harl harl;
 
     if (argc != 2 || !argv[1])
     {
-        cerr << "invalid arguments!" << endl;
+        std::cerr << "invalid arguments!" << endl;
         cout << "./harlFilter <level>\nlevels: DEBUG, INFO, WARNING, ERROR" << endl;
         return EXIT_FAILURE;
     }

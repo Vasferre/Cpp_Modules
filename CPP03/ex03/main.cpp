@@ -5,28 +5,28 @@
 
 int main(void)
 {
-    DiamondTrap Junior("Junior");
-	Junior.whoAmI(); 
+    DiamondTrap vasco("vasco");
+	vasco.whoAmI(); 
 	cout << endl;
 
-    DiamondTrap Leonice("Leonice");
-
-	cout << endl;
-
-	Junior.whoAmI();
+    DiamondTrap peixoto("peixoto");
 
 	cout << endl;
 
-	Leonice.whoAmI();
+	vasco.whoAmI();
 
 	cout << endl;
 
-	Junior.attack("Leonice");
-	Leonice.takeDamage(10);
+	peixoto.whoAmI();
 
 	cout << endl;
 
-	Leonice.beRepaired(5);
+	vasco.attack("peixoto");
+	peixoto.takeDamage(10);
+
+	cout << endl;
+
+	peixoto.beRepaired(5);
 
 	cout << endl;
 

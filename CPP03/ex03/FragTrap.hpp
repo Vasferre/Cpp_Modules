@@ -1,19 +1,18 @@
 #ifndef FRAGTRAP_HPP
 #define FRAGTRAP_HPP
 
-#include "ScavTrap.hpp"
+#include "ClapTrap.hpp"
 
-class FragTrap : virtual public ClapTrap 
+class FragTrap : public virtual ClapTrap
 {
-    public:
-        FragTrap(void);
-        FragTrap(std::string name);
-        FragTrap(const FragTrap &copy);
-        FragTrap(void);
+private:
+	FragTrap();
 
-        FragTrap &operator=(const FragTrap &assign);
-        
-        void highFivesGuys(void);
+public:
+	void highFivesGuys();
+
+	FragTrap(string name);
+	~FragTrap();
 };
 
 #endif

@@ -4,36 +4,36 @@
 
 int main(void)
 {
-    FragTrap Junior("Junior");
-    FragTrap Leonice("Leonice");
+    FragTrap vasco("vasco");
+    FragTrap peixoto("peixoto");
 
     cout << endl;
 
-	Junior.attack("Robert");
-	Leonice.takeDamage(5);
+	vasco.attack("Robert");
+	peixoto.takeDamage(5);
 
 	cout << endl;
 
-	Junior.attack("Leonice");
-	Leonice.takeDamage(1);
+	vasco.attack("peixoto");
+	peixoto.takeDamage(1);
 
 	cout << endl;
 
-	Junior.attack("Leonice");
-	Leonice.takeDamage(1);
+	vasco.attack("peixoto");
+	peixoto.takeDamage(1);
 
 	cout << endl;
 
-	Leonice.beRepaired(7);
+	peixoto.beRepaired(7);
 
 	cout << endl;
 
-	Junior.attack("Leonice");
-	Leonice.takeDamage(100);
+	vasco.attack("peixoto");
+	peixoto.takeDamage(100);
 
 	cout << endl;
 
-	Junior.highFivesGuys();
+	vasco.highFivesGuys();
 
 	cout << endl;
 }

@@ -1,24 +1,35 @@
 #ifndef FIXED_HPP
-#define FIXED_HPP
+# define FIXED_HPP
 
-#include <iostream>
-#include <string>
-#include <cstdlib>
+# include <iostream>
+# include <string>
+# include <cstdlib>
 
-class FIXED
+using std::cout;
+using std::endl;
+
+class Fixed
 {
-    private:
-        int num;
-        static const int bits = 8;
-    public:
-        Fixed(void);
-        Fixed(const Fixed &copy);
-        Fixed(int number);
+	int number;
+	static const int bits = 8;
 
-        Fixedd(void);
+	public:
+		// Constructors
+		Fixed(void);
+		Fixed(const Fixed &copy);
+		Fixed(int number);
+		
+		// Destructor
+		~Fixed(void);
+		
+		// Operators
+		Fixed & operator=(const Fixed &assign);
+		
+		// Getters / Setters
+		int getNumber(void) const;
+		void setNumber(int number);
+		int getRawBits(void) const;
+		void setRawBits(int const bits);
+};
 
-        int getNumber(void) const;
-        void setNumber(int number);
-        int getRawBits(void) const;
-        void setRawBits(int const bits);
-}
+#endif

@@ -1,53 +1,22 @@
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(void) 
+DiamondTrap::DiamondTrap(string name) : ClapTrap(name), ScavTrap(name), FragTrap(name)
 {
-    this->name = "nameless";
-    ClapTrap::name = name + "_clap_name";
-    this->hitPoints = 100;
-    this->energyPoints = ScavTrap::energyPoints;
-    this->attackDamage = FragTrap::attackDamage;
+	name = name;
+	ClapTrap::name = name + "_clap_name";
 
-	cout << "\e[0;33mDefault Constructor called of DiamondTrap\e[0m" << endl;
+	FragTrap::hit_points = 100;
+	ScavTrap::energy_points = 50;
+	FragTrap::attack_damage = 30;
+	cout << "DiamondTrap: Default Constructor called" << endl;
 }
 
-DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name), ScavTrap(name), FragTrap(name)
+DiamondTrap::~DiamondTrap()
 {
-    this->name = name;
-    ClapTrap::name = name + "_clap_name";
-    this->hitPoints = FragTrap::hitPoints;
-    this->energyPoints = ScavTrap::energyPoints;
-    this->attackDamage = FragTrap::attackDamage;
-
-	cout << "\e[0;33mFields Constructor called of DiamondTrap\e[0m" << endl;
+	cout << "DiamondTrap: Destructor called" << endl;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap &copy)
+void DiamondTrap::whoAmI()
 {
-    *this = copy;
-    cout << "\e[0;33mCopy Constructor called of DiamondTrap\e[0m" << endl;
-}
-
-DiamondTrap::~DiamondTrap(void) {
-    cout << "\e[0;31mDestructor called of DiamondTrap\e[0m" << endl;
-}
-
-DiamondTrap &DiamondTrap::operator=(const DiamondTrap &assign)
-{
-    this->name = assign.name;
-    this->ClapTrap::name = assign.ClapTrap::name;
-	this->hitPoints = assign.hitPoints;
-	this->energyPoints = assign.energyPoints;
-	this->attackDamage = assign.attackDamage;
-	return *this;
-}
-
-void DiamondTrap::whoAmI(void) {
-
-    cout << "name: " << this->name << endl;
-    cout << "hit: " << this->hitPoints << endl;
-    cout << "energy: " << this->energyPoints << endl;
-    cout << "attack: " << this->attackDamage << endl;
-
-    cout << "I'm DiamondTrap named: " << this->name << ", ClapTrap named: " << ClapTrap::name << endl;
+	cout << "I am a DiamondTrap named " << name << ", ClapTrap name: " << ClapTrap::name << endl;
 }

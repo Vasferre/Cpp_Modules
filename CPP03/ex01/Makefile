@@ -3,7 +3,7 @@ NAME = serena
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -I./includes
 RM = rm -rf
 
-SRCS = src/ClapTrap.cpp src/main.cpp src/ScavTrap.cpp
+SRCS = ClapTrap.cpp main.cpp ScavTrap.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 

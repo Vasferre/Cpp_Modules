@@ -3,7 +3,7 @@ NAME = fixedNumber
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -I./includes
 RM = rm -rf
 
-SRCS = src/Fixed.cpp src/main.cpp
+SRCS = fixed.cpp main.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 

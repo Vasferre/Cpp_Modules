@@ -2,22 +2,22 @@
 
 int main(void)
 {
-	ClapTrap Roberto("Roberto");
-	ClapTrap Juninho("Juninho");
+	ClapTrap Peixoto("peixoto");
+	ClapTrap vasco("vasco");
 
 	cout << endl;
 	
-	Roberto.attack("Juninho");
-	Juninho.takeDamage(5);
+	Peixoto.attack("vasco");
+	vasco.takeDamage(5);
 
 	cout <<  endl;
 
-	Juninho.beRepaired(5);
+	vasco.beRepaired(5);
 
 	cout << endl;
 
-	Juninho.attack("Roberto");
-	Roberto.takeDamage(10);
+	vasco.attack("peixoto");
+	Peixoto.takeDamage(10);
 
 	cout << endl;
 }

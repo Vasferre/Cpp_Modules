@@ -1,29 +1,30 @@
 # include "ScavTrap.hpp"
 
-// Overrinding constructor, destructor and attack method
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
-	this->hitPoints = 100;
-    this->energyPoints = 50;
-    this->attackDamage = 20;
-
-    cout << "\e[0;33mDefault Constructor called of ScavTrap\e[0m" << endl;
+ScavTrap::ScavTrap(string name) : ClapTrap(name)
+{
+	hit_points = 100;
+	energy_points = 50;
+	attack_damage = 20;
+	cout << "ScavTrap: Default Constructor called" << endl;
 }
 
-ScavTrap::~ScavTrap(void) {
-	cout << "\e[0;31mDestructor called of ScavTrap\e[0m" << endl;
+ScavTrap::~ScavTrap()
+{
+	cout << "ScavTrap: Destructor called" << endl;
 }
 
-void ScavTrap::attack(const std::string& target) {
-    if (this->energyPoints <= 0)
-    {
-        cout << "ScavTrap " << this->name << " is out of energy!" << endl;
-        return ;
-    }
-    cout << "ScavTrap " << this->name << " attacks " << target << ", causing " << this->attackDamage << " points of damage!" << endl;
-    this->energyPoints--; 
+void ScavTrap::attack(const string &target)
+{
+	if (!haveEnergy())
+	{
+		cout << "ScavTrap: " << name << " is out of energy!" << endl;
+		return;
+	}
+	cout << "ScavTrap " << name << " attacks " << target << ", causing " << attack_damage << " points of damage!" << endl;
+	energy_points -= 1;
 }
 
-//ScavTrap exclusive method
-void ScavTrap::guardGate(void) {
-    cout << "ScavTrap " << this->name << " is now in Gate keeper mode!" << endl;
+void ScavTrap::guardGate()
+{
+	cout << "ScavTrap: " << name << " is now in Gate keeper mode." << endl;
 }

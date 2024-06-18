@@ -3,7 +3,7 @@ NAME = bsp
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -I./includes
 RM = rm -rf
 
-SRCS = src/Fixed.cpp src/main.cpp src/Point.cpp src/Bsp.cpp
+SRCS = Fixed.cpp main.cpp Point.cpp Bsp.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 

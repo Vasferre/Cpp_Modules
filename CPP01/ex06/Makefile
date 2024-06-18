@@ -3,7 +3,7 @@ NAME = harlFilter
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -I./includes
 RM = rm -rf
 
-SRCS = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
+SRCS = main.cpp harl.cpp main.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 

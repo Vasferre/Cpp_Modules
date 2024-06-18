@@ -14,4 +14,4 @@ class Zombie{
         Zombie();
         
 };
-Zombie* zombieHorde(int N, std::string name);
+Zombie* zombieHorde(int n, std::string name);

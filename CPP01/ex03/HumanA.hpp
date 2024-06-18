@@ -1,18 +1,18 @@
 #ifndef HUMANA_H
 #define HUMANA_H
 
+#include "Weapon.hpp" 
 #include <iostream>
-#include "Weapon.hpp"
 
-std::cout;
-std::endl;
+using std::cout;
+using std::endl;
 
 class HumanA {
 
         std::string name;
-        weapon &weapon;
+        Weapon &weapon;
     public:
-      HumanA(std::string name, weapon &weapon);
+      HumanA(std::string name, Weapon &weapon);
       void attack(void);
 };
 #endif

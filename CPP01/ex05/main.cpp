@@ -5,12 +5,14 @@ int main(void)
     std::string input;
     Harl harl;
 
-    while(!input.empty())
+    do
     {
         cout << "nLevels: DEBUG | INFO | WARNING | ERROR\n" << endl;
         getline(std::cin, input);
         harl.complain(input);
 
-    }
+    } while (!input.empty());
+
+
     return EXIT_SUCCESS;
 }

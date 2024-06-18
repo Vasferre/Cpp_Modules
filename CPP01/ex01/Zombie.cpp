@@ -15,3 +15,4 @@ void Zombie::announce(int i){
 void Zombie::setName(std::string name) {
     this->name = name;
 }
+

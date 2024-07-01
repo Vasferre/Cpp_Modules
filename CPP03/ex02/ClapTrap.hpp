@@ -16,8 +16,8 @@ protected:
 	unsigned energy_points;
 	unsigned attack_damage;
 
-	bool haveEnergy();
-	bool isAlive();
+	bool Energy();
+	bool Alive();
 
 public:
 	void attack(const string &target);

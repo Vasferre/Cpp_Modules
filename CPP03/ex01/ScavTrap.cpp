@@ -11,12 +11,12 @@ ScavTrap::ScavTrap(string name) : ClapTrap(name)
 
 ScavTrap::~ScavTrap()
 {
-	cout << "ScavTrap: Destructor called" << endl;
+	cout << this->name << "\e[0;33m destroyed\e[0m" << endl;
 }
 
 void ScavTrap::attack(const string &target)
 {
-	if (!haveEnergy())
+	if (!Energy())
 	{
 		cout << "ScavTrap: " << name << " is out of energy!" << endl;
 		return;

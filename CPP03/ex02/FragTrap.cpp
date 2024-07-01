@@ -15,5 +15,5 @@ FragTrap::~FragTrap()
 
 void FragTrap::highFivesGuys()
 {
-	cout << "FragTrap " << name << " high fives everybody (yes, this is a high five)." << endl;
+	cout << "FragTrap " << name << " high fives everybody!" << endl;
 }

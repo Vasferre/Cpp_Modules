@@ -2,36 +2,23 @@
 
 int main()
 {
-    ScavTrap vasco("vasco");
-    ScavTrap peixoto("peixoto");
-
-    cout << endl;
-
-	vasco.attack("Robert");
-	peixoto.takeDamage(5);
-
+	ScavTrap vasco("vasco");
+	ClapTrap peixoto("peixoto");
+	 for (size_t i = 0; i < 11; i++)
+	 {
+		peixoto.attack("meow");
+	}
+	peixoto.takeDamage(40000);
 	cout << endl;
 
-	vasco.attack("peixoto");
-	peixoto.takeDamage(1);
+	for (size_t i = 0; i < 20; i++)
+	{
+	vasco.takeDamage(1);
+	vasco.beRepaired(1);
+	}
 
-	cout << endl;
-
-	vasco.attack("peixoto");
-	peixoto.takeDamage(1);
-
-	cout << endl;
-
-	peixoto.beRepaired(7);
-
-	cout << endl;
-
-	vasco.attack("peixoto");
-	peixoto.takeDamage(100);
-
-	cout << endl;
-
+	vasco.attack("the air");
 	vasco.guardGate();
 
-	cout << endl;
+	return 0;
 }

@@ -5,18 +5,18 @@ ClapTrap::ClapTrap(string name) : name(name)
 	hit_points = 10;
 	energy_points = 10;
 	attack_damage = 0;
-	cout << "Field Constructor called" << endl;
+	cout << "\e[0;33mField Constructor called\e[0m" << endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &copy)
 {
 	*this = copy;
-	cout << "Copy Constructor called of ClapTrap" << endl;
+	cout << "\e[0;33mcopy Constructor called\e[0m" << endl;
 }
 
 ClapTrap::~ClapTrap()
 {
-	cout << "Destructor called" << endl;
+	cout <<  this->name << "\e[0;33m Destroyed\e[0m" << endl;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &assign)
@@ -30,9 +30,9 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &assign)
 
 void ClapTrap::attack(const string &target)
 {
-	if (!isAlive())
-		cout << "ClapTrap " << name << " is dead!" << endl;
-	else if (!haveEnergy())
+	if (!Alive())
+		cout << "ClapTrap " << name << " died!" << endl;
+	else if (!Energy())
 		cout << "ClapTrap " << name << " is out of energy!" << endl;
 	else
 	{
@@ -46,35 +46,35 @@ void ClapTrap::takeDamage(unsigned int amount)
 	if (hit_points <= amount)
 	{
 		hit_points = 0;
-		cout << "ClapTrap " << name << " is dead!" << endl;
+		cout << "ClapTrap " << name << " died!" << endl;
 		return;
 	}
 	hit_points -= amount;
 	cout << "ClatTrap " << name << " take damage for " << amount << " hit points" << endl;
-	cout << "Current health: " << hit_points << endl;
+	cout << "health: " << hit_points << endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-	if (!isAlive())
-		cout << "ClapTrap " << name << " is dead!" << endl;
-	else if (!haveEnergy())
+	if (!Alive())
+		cout << "ClapTrap " << name << " died!" << endl;
+	else if (!Energy())
 		cout << "ClapTrap " << name << " is out of energy!" << endl;
 	else
 	{
 		hit_points += amount;
 		cout << "ClatTrap " << name << " repairs itself for " << amount << " hit points" << endl;
-		cout << "Current health: " << hit_points << endl;
+		cout << "health: " << hit_points << endl;
 		energy_points -= 1;
 	}
 }
 
-bool ClapTrap::haveEnergy()
+bool ClapTrap::Energy()
 {
 	return (energy_points > 0);
 }
 
-bool ClapTrap::isAlive()
+bool ClapTrap::Alive()
 {
 	return (hit_points > 0);
 }

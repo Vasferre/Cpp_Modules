@@ -15,7 +15,7 @@ ScavTrap::~ScavTrap()
 
 void ScavTrap::attack(const string &target)
 {
-	if (!haveEnergy())
+	if (!Energy())
 	{
 		cout << "ScavTrap: " << name << " is out of energy!" << endl;
 		return;

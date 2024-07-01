@@ -1,23 +1,22 @@
 #include "ClapTrap.hpp"
 
-int main(void)
+int main()
 {
-	ClapTrap Peixoto("peixoto");
-	ClapTrap vasco("vasco");
+	ClapTrap Vasco("vasco");
+	ClapTrap Peixoto("Peixoto");
 
-	cout << endl;
-	
-	Peixoto.attack("vasco");
-	vasco.takeDamage(5);
-
-	cout <<  endl;
-
-	vasco.beRepaired(5);
-
+	for (size_t i = 0; i < 11; i++)
+	{
+		Vasco.attack("the air");
+	}
+	Vasco.takeDamage(40000);
 	cout << endl;
 
-	vasco.attack("peixoto");
-	Peixoto.takeDamage(10);
+	for (size_t i = 0; i < 20; i++)
+	{
+		Peixoto.takeDamage(1);
+		Peixoto.beRepaired(1);
+	}
 
-	cout << endl;
+	return 0;
 }

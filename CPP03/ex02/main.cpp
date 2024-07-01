@@ -2,38 +2,26 @@
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 
-int main(void)
+int main()
 {
-    FragTrap vasco("vasco");
-    FragTrap peixoto("peixoto");
+	FragTrap Vasco("Vasco");
 
-    cout << endl;
+	 ClapTrap peixoto("peixoto");
+	 for (size_t i = 0; i < 11; i++)
+	 {
+	 	peixoto.attack("meow");
+	 }
+	 peixoto.takeDamage(40000);
+	 cout << endl;
 
-	vasco.attack("Robert");
-	peixoto.takeDamage(5);
+	 for (size_t i = 0; i < 20; i++)
+	 {
+	 	Vasco.takeDamage(1);
+	 	Vasco.beRepaired(1);
+	 }
 
-	cout << endl;
+	Vasco.attack("the air");
+	Vasco.highFivesGuys();
 
-	vasco.attack("peixoto");
-	peixoto.takeDamage(1);
-
-	cout << endl;
-
-	vasco.attack("peixoto");
-	peixoto.takeDamage(1);
-
-	cout << endl;
-
-	peixoto.beRepaired(7);
-
-	cout << endl;
-
-	vasco.attack("peixoto");
-	peixoto.takeDamage(100);
-
-	cout << endl;
-
-	vasco.highFivesGuys();
-
-	cout << endl;
+	return 0;
 }

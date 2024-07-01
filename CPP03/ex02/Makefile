@@ -1,5 +1,5 @@
 CC = c++
-NAME = repetitiveWork
+NAME = ClapTrap
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -I./includes
 RM = rm -rf
 

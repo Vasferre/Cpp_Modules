@@ -1,19 +1,34 @@
 # include "FragTrap.hpp"
+FragTrap::FragTrap() {}
 
-FragTrap::FragTrap(string name) : ClapTrap(name)
+FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
 	hit_points = 100;
 	energy_points = 100;
 	attack_damage = 30;
-	cout << "FragTrap: Default Constructor called" << endl;
+	std::cout << "\e[0;33m Fragtrap: default Constructor called\e[0m" << std::endl;
+}
+FragTrap::FragTrap(const FragTrap &copy): ClapTrap(copy)
+{
+	std::cout << "FragTrap Copy Constructor called" << std::endl;
 }
 
 FragTrap::~FragTrap()
 {
-	cout << "FragTrap: Destructor called" << endl;
+	std::cout << "\e[0;33m Fragtrap :Destructor called\e[0m" << std::endl;
 }
 
+
+FragTrap &FragTrap::operator=(const FragTrap &assign) {
+	std::cout << "FragTrap Assignation operator called" << std::endl;
+	this->name = assign.name;
+	this->hit_points = assign.hit_points;
+	this->energy_points = assign.energy_points;
+	this->attack_damage = assign.attack_damage;
+	return *this;
+}
 void FragTrap::highFivesGuys()
 {
-	cout << "FragTrap " << name << " high fives everybody!" << endl;
+	std::cout << "FragTrap " << name << " high fives everybody!" << std::endl;
 }
+

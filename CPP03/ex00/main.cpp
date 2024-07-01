@@ -7,10 +7,10 @@ int main()
 
 	for (size_t i = 0; i < 11; i++)
 	{
-		Vasco.attack("the air");
+		Vasco.attack("nothing");
 	}
 	Vasco.takeDamage(40000);
-	cout << endl;
+	std::cout << std::endl;
 
 	for (size_t i = 0; i < 20; i++)
 	{

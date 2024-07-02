@@ -1,36 +1,34 @@
-#include "Dog.hpp"
+#include "WrongAnimal.hpp"
 
-Dog::Dog(void) : Animal()
+WrongAnimal::WrongAnimal(void)
 {
-    this->type = "Dog";
-    this->brain = new Brain();
-    cout << "\e[0;33mDefault Constructor called of Dog\e[0m" << endl;
+    this->type = "nameless";
+    cout << "\e[0;33mDefault Constructor called of WrongAnimal\e[0m" << endl;
 }
 
-Dog::Dog(const Dog &copy) 
+WrongAnimal::WrongAnimal(const WrongAnimal &copy)
 {
     *this = copy;
-    cout << "\e[0;33mCopy Constructor called of Dog\e[0m" << endl;
+    cout << "\e[0;33mCopy Constructor called of WrongAnimal\e[0m" << endl;
 }
 
-Dog::~Dog(void)
+WrongAnimal::~WrongAnimal(void)
 {
-    delete this->brain;
-    cout << "\e[0;31mDestructor called of Dog\e[0m" << endl;
+    cout << "\e[0;31mDestructor called of WrongAnimal\e[0m" << endl;
 }
 
-std::string Dog::getType(void) const
-{
-    return this->type;
-}
-
-Dog &Dog::operator=(const Dog &assign)
+WrongAnimal &WrongAnimal::operator=(const WrongAnimal &assign)
 {
     this->type = assign.getType();
     return *this;
 }
 
-void Dog::makeSound(void) const
+std::string WrongAnimal::getType(void) const
 {
-    cout << "au au au" << endl;
+    return this->type;
+}
+
+void WrongAnimal::makeSound(void) const
+{
+    cout << "Wrong Nameless makes an unrecognized sound!" << endl;
 }

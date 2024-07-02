@@ -6,8 +6,25 @@
 
 int main()
 {
-	Animal *animals[4] = {new Dog(), new Dog(), new Cat(), new Cat};
+	const Animal *dog = new Dog();
+	cout << endl;
+	const Cat *cat = new Cat();
+	cout << endl;
+	const WrongAnimal *wrongcat = new WrongCat();
 
-	for (int i = 0; i < 4; i++)
-		delete animals[i];
+	cout << dog->getType() << "'s sound: ";
+	dog->makeSound();
+	cout << cat->getType() << "'s sound: ";
+	cat->makeSound();
+	cout << wrongcat->getType() << "'s sound";
+	wrongcat->makeSound();
+	cout << endl;
+
+	delete dog;
+	cout << endl;
+	delete cat;
+	cout << endl;
+	delete wrongcat;
+
+	return 0;
 }

@@ -3,8 +3,8 @@ NAME = brainnn
 CFLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98 -I./includes
 RM = rm -rf
 
-SRCS = src/Animal.cpp src/Dog.cpp src/Cat.cpp src/main.cpp src/WrongAnimal.cpp \
-		src/WrongCat.cpp src/Brain.cpp
+SRCS = Animal.cpp Dog.cpp Cat.cpp main.cpp WrongAnimal.cpp \
+		WrongCat.cpp Brain.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 

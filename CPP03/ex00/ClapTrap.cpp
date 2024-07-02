@@ -1,24 +1,26 @@
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap() {}
+ClapTrap::ClapTrap() {
+	std::cout << "\e[0;33m Claptrap: Default Constructor called\e[0m" << std::endl;
+}
 
 ClapTrap::ClapTrap(std::string name) : name(name)
 {
 	hit_points = 10;
 	energy_points = 10;
 	attack_damage = 0;
-	std::cout << "\e[0;33mDefault Constructor called of ClapTrap\e[0m" << std::endl;
+	std::cout << "\e[0;33m Claptrap: Constructor with string\e[0m" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &copy)
 {
 	*this = copy;
-	std::cout << "\e[0;33mcopy Constructor called of ClapTrap\e[0m" << std::endl;
+	std::cout << "\e[0;33mClaptrap : copy Constructor\e[0m" << std::endl;
 }
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "\e[0;33mDestructor called\e[0m" << std::endl;
+	std::cout << "\e[0;33m Claptrap: Destructor called\e[0m" << std::endl;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &assign)
@@ -48,7 +50,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 	if (hit_points <= amount)
 	{
 		hit_points = 0;
-		std::cout << "ClapTrap" << name << " died!" << std::endl;
+		std::cout << "ClapTrap " << name << " died!" << std::endl;
 		return;
 	}
 	hit_points -= amount;

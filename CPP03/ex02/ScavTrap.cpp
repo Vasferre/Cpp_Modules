@@ -1,10 +1,12 @@
 # include "ScavTrap.hpp"
-ScavTrap::ScavTrap () {}
+ScavTrap::ScavTrap () {
+	std::cout << "\e[0;33m Scavtrap: Default Constructor called\e[0m" << std::endl;
+}
 
 ScavTrap::ScavTrap(const ScavTrap &copy): ClapTrap(copy)
 {
 	this->guarding_gate = copy.guarding_gate;
-	std::cout << "ScavTrap Copy Constructor called" << std::endl;
+	std::cout << "ScavTrap: Copy Constructor called" << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
@@ -13,7 +15,7 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	energy_points = 50;
 	attack_damage = 20;
 	this->guarding_gate = false;
-	std::cout << "\e[0;33m Scavtrap: Default Constructor called\e[0m" << std::endl;
+	std::cout << "\e[0;33m Scavtrap: Constructor with string called\e[0m" << std::endl;
 }
 
 
@@ -24,7 +26,7 @@ ScavTrap::~ScavTrap()
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &assign)
 {
-	std::cout << "ScavTrap Assignation operator called" << std::endl;
+	std::cout << "ScavTrap: Assignation operator called" << std::endl;
 	this->name = assign.name;
 	this->hit_points = assign.hit_points;
 	this->energy_points = assign.energy_points;
@@ -39,7 +41,7 @@ void ScavTrap::attack(const std::string &target)
 		std::cout << "ScavTrap: " << name << " is out of energy!" << std::endl;
 		return;
 	}
-	std::cout << "ScavTrap " << name << " attacks " << target << ", causing " << attack_damage << " points of damage!" << std::endl;
+	std::cout << "ScavTrap: " << name << " attacks " << target << ", causing " << attack_damage << " points of damage!" << std::endl;
 	energy_points -= 1;
 }
 

@@ -1,36 +1,34 @@
-#include "Dog.hpp"
+#include "WrongCat.hpp"
 
-Dog::Dog(void) : Animal()
+WrongCat::WrongCat(void) : WrongAnimal()
 {
-    this->type = "Dog";
-    this->brain = new Brain();
-    cout << "\e[0;33mDefault Constructor called of Dog\e[0m" << endl;
+    this->type = "WrongCat";
+    cout << "\e[0;33mDefault Constructor called of WrongCat\e[0m" << endl;
 }
 
-Dog::Dog(const Dog &copy) 
+WrongCat::WrongCat(const WrongCat &copy) 
 {
     *this = copy;
-    cout << "\e[0;33mCopy Constructor called of Dog\e[0m" << endl;
+    cout << "\e[0;33mCopy Constructor called of WrongCat\e[0m" << endl;
 }
 
-Dog::~Dog(void)
+WrongCat::~WrongCat(void)
 {
-    delete this->brain;
-    cout << "\e[0;31mDestructor called of Dog\e[0m" << endl;
+    cout << "\e[0;31mDestructor called of WrongCat\e[0m" << endl;
 }
 
-std::string Dog::getType(void) const
+std::string WrongCat::getType(void) const
 {
     return this->type;
 }
 
-Dog &Dog::operator=(const Dog &assign)
+WrongCat &WrongCat::operator=(const WrongCat &assign)
 {
     this->type = assign.getType();
     return *this;
 }
 
-void Dog::makeSound(void) const
+void WrongCat::makeSound(void) const
 {
-    cout << "au au au" << endl;
+    cout << "Wrong cat says meow" << endl;
 }

@@ -1,6 +1,6 @@
 #include "ClapTrap.hpp"
 ClapTrap::ClapTrap() {
-	std::cout << "ClapTrap Default Constructor called" << std::endl;
+	std::cout << "ClapTrap:Default Constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name) : name(name)
@@ -8,18 +8,18 @@ ClapTrap::ClapTrap(std::string name) : name(name)
 	hit_points = 10;
 	energy_points = 10;
 	attack_damage = 0;
-	std::cout << "\e[0;33mField Constructor called\e[0m" << std::endl;
+	std::cout << "\e[0;33m Claptrap: Constructor with string called\e[0m" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &copy)
 {
 	*this = copy;
-	std::cout << "\e[0;33mcopy Constructor called\e[0m" << std::endl;
+	std::cout << "\e[0;33m Claptrap: copy Constructor called\e[0m" << std::endl;
 }
 
 ClapTrap::~ClapTrap()
 {
-	std::cout <<  this->name << "\e[0;33m Destroyed\e[0m" << std::endl;
+	std::cout <<  this->name << "\e[0;33m Claptrap: Destroyed\e[0m" << std::endl;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &assign)

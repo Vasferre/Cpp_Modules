@@ -1,6 +1,9 @@
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap() {
+	hit_points = 10;
+	energy_points = 10;
+	attack_damage = 0;
 	std::cout << "\e[0;33m Claptrap: Default Constructor called\e[0m" << std::endl;
 }
 

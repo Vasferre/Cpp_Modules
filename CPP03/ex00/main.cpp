@@ -7,7 +7,7 @@ int main()
 
 	for (size_t i = 0; i < 11; i++)
 	{
-		Vasco.attack("nothing");
+		Vasco.attack("meow");
 	}
 	Vasco.takeDamage(40000);
 	std::cout << std::endl;

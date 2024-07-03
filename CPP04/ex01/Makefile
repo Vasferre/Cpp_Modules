@@ -1,5 +1,5 @@
 CC = c++
-NAME = Polymorphism
+NAME = brainnn
 CFLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98 -I./includes
 RM = rm -rf
 

@@ -1,9 +1,10 @@
 CC = c++
-NAME = FragTrap
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -I./includes
+NAME = interface
+CFLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98 -I./includes
 RM = rm -rf
 
-SRCS = ClapTrap.cpp main.cpp ScavTrap.cpp FragTrap.cpp
+SRCS = AMateria.cpp Ice.cpp Cure.cpp Character.cpp main.cpp \
+		MateriaSource.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 

@@ -1,5 +1,8 @@
 # include "FragTrap.hpp"
-FragTrap::FragTrap() {
+FragTrap::FragTrap() : ClapTrap() {
+	hit_points = 100;
+	energy_points = 100;
+	attack_damage = 30;
 	std::cout << "\e[0;33m Fragtrap: Default Constructor called\e[0m" << std::endl;
 }
 
@@ -17,7 +20,7 @@ FragTrap::FragTrap(const FragTrap &copy): ClapTrap(copy)
 
 FragTrap::~FragTrap()
 {
-	std::cout << "\e[0;33m Fragtrap: Destructor called\e[0m" << std::endl;
+	std::cout << "\e[0;33m Fragtrap: " << name << "Destructor called\e[0m" << std::endl;
 }
 
 

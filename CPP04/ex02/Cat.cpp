@@ -32,5 +32,5 @@ Cat &Cat::operator=(const Cat &assign)
 
 void Cat::makeSound(void) const
 {
-    cout << "meow" << endl;
+    cout << "miau" << endl;
 }

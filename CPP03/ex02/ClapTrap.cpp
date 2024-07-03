@@ -1,6 +1,9 @@
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap() {
+	hit_points = 10;
+	energy_points = 10;
+	attack_damage = 0;
 	std::cout << "ClapTrap Default Constructor called" << std::endl;
 }
 
@@ -20,7 +23,7 @@ ClapTrap::ClapTrap(const ClapTrap &copy)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "\e[0;33m Claptrap :Destructor called\e[0m" << std::endl;
+	std::cout << "\e[0;33m Claptrap : " << name << "Destructor called\e[0m" << std::endl;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &assign)

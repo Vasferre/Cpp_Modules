@@ -4,19 +4,19 @@ Dog::Dog(void) : Animal()
 {
     this->type = "Dog";
     this->brain = new Brain();
-    cout << "\e[0;33mDefault Constructor called of Dog\e[0m" << endl;
+    std::cout << "\e[0;33mDefault Constructor called of Dog\e[0m" << std::endl;
 }
 
 Dog::Dog(const Dog &copy) 
 {
     *this = copy;
-    cout << "\e[0;33mCopy Constructor called of Dog\e[0m" << endl;
+    std::cout << "\e[0;33mCopy Constructor called of Dog\e[0m" << std::endl;
 }
 
 Dog::~Dog(void)
 {
     delete this->brain;
-    cout << "\e[0;31mDestructor called of Dog\e[0m" << endl;
+    std::cout << "\e[0;31mDestructor called of Dog\e[0m" << std::endl;
 }
 
 std::string Dog::getType(void) const
@@ -32,5 +32,5 @@ Dog &Dog::operator=(const Dog &assign)
 
 void Dog::makeSound(void) const
 {
-    cout << "au au au" << endl;
+    std::cout << "au au au" << std::endl;
 }

@@ -4,19 +4,19 @@ Cat::Cat(void) : Animal()
 {
     this->type = "Cat";
     this->brain = new Brain();
-    cout << "\e[0;33mDefault Constructor called of Cat\e[0m" << endl;
+    std::cout << "\e[0;33mDefault Constructor called of Cat\e[0m" << std::endl;
 }
 
 Cat::Cat(const Cat &copy) 
 {
     *this = copy;
-    cout << "\e[0;33mCopy Constructor called of Cat\e[0m" << endl;
+    std::cout << "\e[0;33mCopy Constructor called of Cat\e[0m" << std::endl;
 }
 
 Cat::~Cat(void)
 {
     delete this->brain;
-    cout << "\e[0;31mDestructor called of Cat\e[0m" << endl;
+    std::cout << "\e[0;31mDestructor called of Cat\e[0m" << std::endl;
 }
 
 std::string Cat::getType(void) const
@@ -32,5 +32,5 @@ Cat &Cat::operator=(const Cat &assign)
 
 void Cat::makeSound(void) const
 {
-    cout << "miau" << endl;
+    std::cout << "miau" << std::endl;
 }

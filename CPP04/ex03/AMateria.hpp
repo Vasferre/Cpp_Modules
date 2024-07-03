@@ -5,9 +5,6 @@ class AMateria;
 #include "ICharacter.hpp"
 #include <iostream>
 
-using std::cout;
-using std::endl;
-
 class ICharacter;
 
 class AMateria

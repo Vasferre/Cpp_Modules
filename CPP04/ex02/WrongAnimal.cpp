@@ -3,18 +3,18 @@
 WrongAnimal::WrongAnimal(void)
 {
     this->type = "nameless";
-    cout << "\e[0;33mDefault Constructor called of WrongAnimal\e[0m" << endl;
+    std::cout << "\e[0;33mDefault Constructor called of WrongAnimal\e[0m" << std::endl;
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal &copy)
 {
     *this = copy;
-    cout << "\e[0;33mCopy Constructor called of WrongAnimal\e[0m" << endl;
+    std::cout << "\e[0;33mCopy Constructor called of WrongAnimal\e[0m" << std::endl;
 }
 
 WrongAnimal::~WrongAnimal(void)
 {
-    cout << "\e[0;31mDestructor called of WrongAnimal\e[0m" << endl;
+    std::cout << "\e[0;31mDestructor called of WrongAnimal\e[0m" << std::endl;
 }
 
 WrongAnimal &WrongAnimal::operator=(const WrongAnimal &assign)
@@ -30,5 +30,5 @@ std::string WrongAnimal::getType(void) const
 
 void WrongAnimal::makeSound(void) const
 {
-    cout << "Wrong Nameless makes an unrecognized sound!" << endl;
+    std::cout << "Wrong Nameless makes an unrecognized sound!" << std::endl;
 }

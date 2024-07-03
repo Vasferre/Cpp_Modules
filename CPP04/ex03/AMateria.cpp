@@ -3,17 +3,17 @@
 AMateria::AMateria(void) 
 {
     this->type = "";
-    cout << "\e[0;33mDefault Constructor called of AMateria\e[0m" << endl;
+    std::cout << "\e[0;33mDefault Constructor called of AMateria\e[0m" << std::endl;
 }
 
 AMateria::AMateria(std::string const &type) : type(type)
 {
-    cout << "\e[0;33mCopy Constructor called of AMateria\e[0m" << endl;
+    std::cout << "\e[0;33mCopy Constructor called of AMateria\e[0m" << std::endl;
 }
 
 AMateria::~AMateria(void)
 {
-    cout << "\e[0;31mDestructor called of AMateria\e[0m" << endl;
+    std::cout << "\e[0;31mDestructor called of AMateria\e[0m" << std::endl;
 }
 
 AMateria &AMateria::operator=(const AMateria &assign)

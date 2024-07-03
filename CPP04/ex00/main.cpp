@@ -10,16 +10,16 @@ int main()
 	const Animal* j = new Dog();
 	const Animal* i = new Cat();
 
-	cout << endl;
+	std::cout << std::endl;
 
-	cout << i->getType() << " says: ";
+	std::cout << i->getType() << " says: ";
 	i->makeSound(); //will output the cat sound!
-	cout << j->getType() << " says: ";
+	std::cout << j->getType() << " says: ";
 	j->makeSound();
-	cout << meta->getType() << " says: ";
+	std::cout << meta->getType() << " says: ";
 	meta->makeSound();
 
-	cout << endl;
+	std::cout << std::endl;
 
 	delete meta;
 	delete i;

@@ -3,18 +3,18 @@
 WrongCat::WrongCat(void) : WrongAnimal()
 {
     this->type = "WrongCat";
-    cout << "\e[0;33mDefault Constructor called of WrongCat\e[0m" << endl;
+    std::cout << "\e[0;33mDefault Constructor called of WrongCat\e[0m" << std::endl;
 }
 
 WrongCat::WrongCat(const WrongCat &copy) 
 {
     *this = copy;
-    cout << "\e[0;33mCopy Constructor called of WrongCat\e[0m" << endl;
+    std::cout << "\e[0;33mCopy Constructor called of WrongCat\e[0m" << std::endl;
 }
 
 WrongCat::~WrongCat(void)
 {
-    cout << "\e[0;31mDestructor called of WrongCat\e[0m" << endl;
+    std::cout << "\e[0;31mDestructor called of WrongCat\e[0m" << std::endl;
 }
 
 std::string WrongCat::getType(void) const
@@ -30,5 +30,5 @@ WrongCat &WrongCat::operator=(const WrongCat &assign)
 
 void WrongCat::makeSound(void) const
 {
-    cout << "Wrong cat says miau" << endl;
+    std::cout << "Wrong cat says miau" << std::endl;
 }
